@@ -1,0 +1,72 @@
+TEMPLATES = {
+    "scorecard": {
+        "file": "SCORECARD.xlsx",
+        "template_sheet": "template",
+        "output_name": "scorecard_generated",
+        "use_database": False,
+        "db": {
+            "host": "127.0.0.1",
+            "port": 3306,
+            "database": "its_sheet",
+            "query": """
+                SELECT
+                    CONCAT(account, '_', employee_id) AS sheet_name,
+                    employee_name,
+                    employee_id,
+                    tenure,
+                    team_lead,
+                    month,
+                    account,
+                    attendance,
+                    productivity,
+                    quality,
+                    client_escalation,
+                    nte
+                FROM scorecards
+                ORDER BY account, employee_name
+            """,
+            "sheet_name_field": "sheet_name",
+        },
+        "cells": {
+            "employee_name": "C5",
+            "employee_id": "C6",
+            "tenure": "C7",
+            "team_lead": "E6",
+            "month": "E7",
+            "account": "E5",
+            "attendance": "E11",
+            "productivity": "E14",
+            "quality": "E17",
+            "client_escalation": "E20",
+            "nte": "E22",
+        },
+        "sheets": {
+            "Clinicals": {
+                "employee_name": "John Librorania",
+                "employee_id": 123466,
+                "tenure": "90days",
+                "team_lead": "Maria Santos",
+                "month": "March 2026",
+                "account": "Clinicals",
+                "attendance": 20,
+                "productivity": 8,
+                "quality": 20,
+                "client_escalation": 10,
+                "nte": 5,
+            },
+            "CareMedicaCS": {
+                "employee_name": "John Librorania",
+                "employee_id": 123466,
+                "tenure": "90days",
+                "team_lead": "Maria Santos",
+                "month": "March 2026",
+                "account": "CareMedica CS",
+                "attendance": 25,
+                "productivity": 10,
+                "quality": 25,
+                "client_escalation": 10,
+                "nte": 5,
+            },
+        },
+    },
+}
