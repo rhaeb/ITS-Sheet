@@ -12,7 +12,6 @@ ENV/
 
 # Local environment and secrets
 .env
-.env.*
 
 # Test and tooling caches
 .pytest_cache/
