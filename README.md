@@ -1,5 +1,4 @@
 
----
 
 ```markdown
 # Excel Template Generator
@@ -16,11 +15,10 @@ This project uses `openpyxl` to manipulate Excel files and allows you to automat
 - Save generated Excel files to a designated output folder
 - Easy to extend for multiple templates or data sources
 
----
 
 ## Project Structure
 
-```
+---
 
 my_excel_project/
 │
